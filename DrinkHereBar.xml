@@ -27,6 +27,10 @@
       <item>Red Lemonade</item>
       <price>4.50</price>
     </entree>
+    <entree>
+      <item>Coke</item>
+      <price>4.00</price>
+    </entree>
   </section>
   <section name="Beer">
     <entree>
