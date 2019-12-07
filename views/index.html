@@ -9,13 +9,25 @@
 	<title>IWA Demo App</title>
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/drinkherebar.css" rel="stylesheet">
+	<link href="css/DrinkHereBarStyles.css" rel="stylesheet">
+    <script src="js/DrinkHereBarCode.js"></script>
+    <script>
+        window.addEventListener("load", function() {
+            document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            document.querySelector("#calcBill").addEventListener("click", function() {
+                document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            });
+            document.querySelector("#showNonA").addEventListener("click", function() {
+                highlightnonAlcoholic('menuTable', this.checked);
+            });
+        });
+    </script>
 </head>
 
 <body>
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-		<div class="container">	<a class="navbar-brand" href="#">Paddy's Cafe</a>
+		<div class="container">	<a class="navbar-brand" href="#">Drink Here Bar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">	<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
@@ -32,31 +44,48 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-left">
-				<h1 class="mt-5">Welcome to Paddy's Cafe</h1>
-				<p class="lead">Select your entrees from the menu below.</p>
+				<h1 class="mt-5">Welcome to Drink Here Bar</h1>
+				<p class="lead">Select your drinks from the menu below.</p>
 			</div>
 			<div id="results" class="col-lg-8 text-center order-3"></div>
 			<div class="col-lg-4 text-center order-2">
 				<form enctype="application/json" action="/post/json" method="post">
 					<div class="form-group">
 						<select class="form-control" name="sec_n">
-							<option value="0">Side Dishes</option>
-							<option value="1">Breakfast</option>
-							<option value="2">Lunch</option>
-							<option value="3">Dinner</option>
+							<option value="0">Spirits</option>
+							<option value="1">Soft Drinks</option>
+							<option value="2">Beer</option>
+							<option value="3">Cider</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<input class="form-control" type="text" name="item" placeholder="Item">
+						<input class="form-control" type="text" required pattern="[a-zA-Z]*" name="item" placeholder="Item">
 					</div>
 					<div class="form-group">
-						<input class="form-control" type="text" name="price" placeholder="Price">
+						<input class="form-control" type="number" step=".01" name="price" placeholder="Price">
 					</div>
 					<button type="submit" class="btn btn-primary btn-block">Submit</button>
 				</form>
                     <button id="delete" class="btn btn-block btn-danger">Delete</button>
                     <p class="text-muted">To delete an entree, click the required row first</p>
-			</div>
+                <form>
+                <div class="input-group-text">
+                                <p class="text-muted">Click here to see the Non Alcoholic Drinks</p>
+                                &nbsp;&nbsp;
+                                <input type="checkbox" id="showNonA" aria-label="Checkbox for following text input">
+                            </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                                                        <span class="input-group-text">&euro;</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Total" name="txtBillAmt">
+                        <input class="btn btn-block btn-secondary" type="button" name="btnCalcBill" value="Calculate Bill" id="calcBill">
+                        <div class="input-group-append">
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
 		</div>
 	</div>
 	<footer class="footer">

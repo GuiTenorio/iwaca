@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<drinkherebarmenu>
+  <section name="Spirits">
+    <entree>
+      <item>Whisky</item>
+      <price>12.00</price>
+    </entree>
+    <entree>
+      <item>Vodka</item>
+      <price>12.00</price>
+    </entree>
+    <entree>
+      <item>Rum</item>
+      <price>10.00</price>
+    </entree>
+    <entree>
+      <item>New</item>
+      <price>3.99</price>
+    </entree>
+  </section>
+  <section name="Soft Drinks">
+    <entree>
+      <item>Tonic Water</item>
+      <price>3.50</price>
+    </entree>
+    <entree>
+      <item>Club Orange</item>
+      <price>4.50</price>
+    </entree>
+    <entree>
+      <item>Red Lemonade</item>
+      <price>4.50</price>
+    </entree>
+    <entree>
+      <item>New</item>
+      <price>3</price>
+    </entree>
+  </section>
+  <section name="Beer">
+    <entree>
+      <item>Guinness</item>
+      <price>4.50</price>
+    </entree>
+    <entree>
+      <item>Hop House</item>
+      <price>6.50</price>
+    </entree>
+    <entree>
+      <item>Heineken</item>
+      <price>6.00</price>
+    </entree>
+    <entree nonAlcoholic="true">
+      <item>Heineken 0.0</item>
+      <price>6.80</price>
+    </entree>
+    <entree>
+      <item>Five Lamps</item>
+      <price>5.50</price>
+    </entree>
+    <entree>
+      <item>Coors Light</item>
+      <price>5.50</price>
+    </entree>
+    <entree nonAlcoholic="true">
+      <item>Coors Non-Alcoholic</item>
+      <price>6.50</price>
+    </entree>
+    <entree>
+      <item>Budweiser</item>
+      <price>5.50</price>
+    </entree>
+    <entree>
+      <item>Blue Moon</item>
+      <price>6.50</price>
+    </entree>
+    <entree>
+      <item>Smithwicks</item>
+      <price>6.00</price>
+    </entree>
+  </section>
+  <section name="Cider">
+    <entree>
+      <item>Orchard Thieves</item>
+      <price>6.00</price>
+    </entree>
+    <entree>
+      <item>Bulmers</item>
+      <price>5.50</price>
+    </entree>
+    <entree>
+      <item>Koppaberg Strawberry</item>
+      <price>6.00</price>
+    </entree>
+    <entree nonAlcoholic="true">
+      <item>Koppaberg Mixed Fruits</item>
+      <price>6.50</price>
+    </entree>
+    <entree nonAlcoholic="true">
+      <item>Apple Cider</item>
+      <price>6.50</price>
+    </entree>
+  </section>
+</drinkherebarmenu>
