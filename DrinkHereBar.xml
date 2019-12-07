@@ -13,10 +13,6 @@
       <item>Rum</item>
       <price>10.00</price>
     </entree>
-    <entree>
-      <item>New</item>
-      <price>3.99</price>
-    </entree>
   </section>
   <section name="Soft Drinks">
     <entree>
@@ -30,10 +26,6 @@
     <entree>
       <item>Red Lemonade</item>
       <price>4.50</price>
-    </entree>
-    <entree>
-      <item>New</item>
-      <price>3</price>
     </entree>
   </section>
   <section name="Beer">

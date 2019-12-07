@@ -5,7 +5,12 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+
+/* background image */
+  background: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.3)), url("/img/image.jpg");
+  
 }
+
 .footer {
   position: absolute;
   bottom: 0;
